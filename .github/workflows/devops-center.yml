@@ -1,0 +1,13 @@
+name: DevOps Center Workflow
+
+on:
+  push:
+    branches:
+      - '**'           # 👈 Runs on ALL branches for any push
+  pull_request:
+    branches:
+      - '**'           # 👈 Runs on ALL branches for any pull request
+
+jobs:
+  call-main-workflow:
+    uses: ./.github/workflows/sfdx-ci.yml
